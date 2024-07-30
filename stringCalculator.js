@@ -16,6 +16,7 @@ function add(numbers) {
         // Replace newlines with commas before splitting
         const numbersWithCommas = numbers.replace(/\n/g,',');
         const numberArray = numbersWithCommas.split(',');
+        
         const sum = numberArray.reduce((agg, num) => agg + Number(num), 0);
         return sum;
     }
