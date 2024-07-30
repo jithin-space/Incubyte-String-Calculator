@@ -1,6 +1,6 @@
 function add(numbers) {
     // fail first
-    return 0;
+    return numbers == '' ? 0 : Number(numbers);
 }
 
 module.exports = add;
