@@ -20,3 +20,8 @@ test('newline should be treated as a delimiter', () => {
     expect(add('2\n4')).toBe(6);
     expect(add('2\n4,5\n7,8\n')).toBe(26);
 })
+
+test('supports custom delimiters', () => {
+    expect(add('//;\n1;2')).toBe(3); 
+    expect(add('//|\n1|2|3')).toBe(6); //
+})
