@@ -17,6 +17,11 @@ function add(numbers) {
         const numbersWithCommas = numbers.replace(/\n/g,',');
         const numberArray = numbersWithCommas.split(',');
         
+        // Handle negative numbers
+        const negativeNumbers = numberArray.filter(num => parseInt(num, 10) < 0);
+        if (negativeNumbers.length > 0) {
+            throw new Error('Negatives not allowed: ' + negativeNumbers.join(','));
+        }
         const sum = numberArray.reduce((agg, num) => agg + Number(num), 0);
         return sum;
     }
