@@ -17,6 +17,6 @@ test('multiple numbers should return their sum', () => {
 })
 
 test('newline should be treated as a delimiter', () => {
-    expect('2\n,4').toBe(6);
-    expect('2\n,4,5\n,7,8\n').toBe(26);
+    expect(add('2\n4')).toBe(6);
+    expect(add('2\n4,5\n7,8\n')).toBe(26);
 })
