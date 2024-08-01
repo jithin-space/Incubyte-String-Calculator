@@ -30,3 +30,7 @@ test('throws an exception for negative numbers', () =>  {
     expect(() => add('-2')).toThrow('Negatives not allowed: -2');
     expect(() => add('2,-4,5,-6')).toThrow('Negatives not allowed: -4,-6');
 })
+
+test('handling multiplication if the delimiter is *', () => {
+    expect(add('//x\n2x4')).toBe(8);
+})
